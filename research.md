@@ -9,3 +9,20 @@
 4. **AQA vs Manual:** Manual проверяет руками. AQA тестирует кодом другой код. При изменениях в коде - автоматически проводит тестирование.
 
 5. **End-to-End тест:** Проверка полного сценария использования продукта.
+
+6.1. **цикл,PRINT, f строки (форматированные), list(Array), словарь (объект аналог)**
+for user in users:
+    print(f"ID: {user['id']}")
+
+6.2. **функции питона def**
+def check_status_code(code):
+    if code == 200:
+        return True
+    else:
+        return False
+
+
+print(f"Код 200 -> {check_status_code(200)}")
+print(f"Код 404 -> {check_status_code(404)}")
+
+6.3.
