@@ -1,9 +1,9 @@
 import requests
 
 # ---------- ТЕСТ 1: Проверка статус-кода ----------
-def test_get_users_status_code(api_client):
-    response = requests.get(f"{api_client}/users")
-    assert response.status_code == 200
+def test_get_users_status_code(api_client):  # 2. Тест принимает фикстуру api_client
+    response = requests.get(f"{api_client}/users")  # 3. Делаем GET-запрос
+    assert response.status_code == 200        # 4. Проверяем, что статус = 200
 
 # ---------- ТЕСТ 2: Проверка структуры ответа ----------
 def test_get_users_response_structure(api_client):
@@ -42,3 +42,7 @@ def test_create_and_verify_user(api_client):
 def test_get_nonexistent_user(api_client):
     response = requests.get(f"{api_client}/users/9999999999")
     assert response.status_code == 404
+
+def test_get_posts_status_code(api_client):
+    response = requests.get(f"{api_client}/posts")
+    assert response.status_code == 200
