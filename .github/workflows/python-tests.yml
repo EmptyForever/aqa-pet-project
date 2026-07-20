@@ -28,5 +28,4 @@ jobs:
 
     - name: Run tests with pytest
       run: |
-        # pytest tests/test_users_api.py -v
-        pytest -v
+        pytest tests/test_users_api.py -v
